@@ -119,9 +119,9 @@ def batchOperations():
 		elif(choice==4):
 			batch_id = input("Batch ID : ")
 			performance = BATCH.viewPerformance(batch_id)
-			print("%15s | %15s | %15s | %15s"%["Student ID" , "Class Roll Number" , "Student Name" , "Percentage"])
+			print("%15s | %20s | %15s | %15s"%("Student ID" , "Class Roll Number" , "Student Name" , "Percentage"))
 			for record in performance:
-				print("%15s | %15s | %15s | %g"%record)
+				print("%15s | %20s | %15s | %15g"%tuple(record))
 		elif(choice==5):
 			batch_id = input("Batch ID : ")
 			BATCH.viewPerformanceChart(batch_id)
